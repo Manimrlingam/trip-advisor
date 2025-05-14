@@ -1,0 +1,353 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Gabarito", sans-serif;
+}
+
+.trip-advisor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-left img {
+    height: 30px;
+}
+
+.header-left h1 {
+    color: #030005;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 10px 12px;
+    width: 50%;
+    gap: 15px;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    width: 100%;
+    background: transparent;
+}
+
+.header-right {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.hover-box {
+    background-color: #030005;
+    color: white;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.hover-box:hover {
+    background-color: #dfcf3f;
+    color: #030005;
+}
+
+.nav-categories {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    gap: 20px;
+    border-bottom: 1px solid #030005;
+    align-items: center;
+}
+
+.hoverable {
+    position: relative;
+    padding-bottom: 4px;
+    cursor: pointer;
+}
+
+.hoverable::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s ease;
+}
+
+.hoverable:hover::after {
+    width: 100%;
+}
+
+/* Header Banner */
+.hero-banner {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.hero-image {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+}
+
+.hero-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+.hero-text h2 {
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.hero-text p {
+    font-size: 16px;
+}
+
+/* Hotel Section */
+.hotel-section {
+    text-align: center;
+    padding: 40px 20px 10px;
+}
+
+.hotel-section h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.hotel-section h5 {
+    font-weight: 400;
+    color: #555;
+}
+
+/* Photo Grid */
+.photo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.photo-container {
+    position: relative;
+    width: 280px;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-container .text-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 0 0 12px 12px;
+}
+
+.photo-container .text-overlay h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.photo-container .text-overlay p {
+    margin-top: 4px;
+    font-size: 14px;
+}
+/* Recommended Section */
+.recommended {
+    text-align: center;
+    padding: 40px 20px 10px;
+}
+
+/* Photo Grid */
+.recommended__container {
+    text-align: center;
+    padding: 10px;
+}
+
+.photo-page,
+.photo-pager {
+    display: inline-block;
+    margin: 15px;
+    vertical-align: top;
+}
+
+
+.photo-page,
+.photo-pager {
+    position: relative;
+    width: 280px;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-page:hover,
+.photo-pager:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.photo-page img,
+.photo-pager img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 0 0 12px 12px;
+}
+
+.text-overlay h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.text-overlay p {
+    margin-top: 4px;
+    font-size: 14px;
+}
+.footer{
+    padding: 30px;
+    background-color: black;
+    color: white;
+}
+.footer__one{
+    display: flex;
+    gap: 10px;
+}
+.footer__one p{
+    margin: 20px;
+}
+.footer__two{
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    padding: 30px;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.footer__one {
+    display: flex;
+    gap: 50px;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.footer__one p {
+    margin: 8px 0;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.footer__one p:hover {
+    color: #f0c040; /* Gold-like hover color */
+    text-decoration: underline;
+}
+
+.footer__two {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer__two h1 {
+    margin: 0 0 10px;
+}
+
+.footer__note {
+    font-size: 14px;
+    color: #ccc;
+    max-width: 500px;
+}
+
+.show-more {
+    color: #f0c040;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.footer__social a {
+    margin-right: 10px;
+}
+
+.footer__social img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1); /* Make icons white */
+    transition: transform 0.3s ease;
+}
+
+.footer__social img:hover {
+    transform: scale(1.2);
+}
